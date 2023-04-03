@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "928660425654",
+    "project_id": "airquality-database",
+    "storage_bucket": "airquality-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928660425654:android:5172b1b348841aca00cf17",
+        "android_client_info": {
+          "package_name": "com.example.airquality_monitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928660425654-vp4lfosh966sh63imr5hfsbqf21js9cp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.airquality_monitor",
+            "certificate_hash": "7b7860392fbd0bf0c75f93561eae8db2ab442d5f"
+          }
+        },
+        {
+          "client_id": "928660425654-tq12v31fjo0bsfhgpj4em85jju2o7agv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPSSPqkFluPyrvtY0kBHBKgVWCqczzOXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928660425654-tq12v31fjo0bsfhgpj4em85jju2o7agv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928660425654:android:21a225dab143789000cf17",
+        "android_client_info": {
+          "package_name": "com.example.flutter_airqualitymonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928660425654-tq12v31fjo0bsfhgpj4em85jju2o7agv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPSSPqkFluPyrvtY0kBHBKgVWCqczzOXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928660425654-tq12v31fjo0bsfhgpj4em85jju2o7agv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
