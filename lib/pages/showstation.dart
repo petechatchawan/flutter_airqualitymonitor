@@ -8,32 +8,25 @@ import 'package:flutter_airqualitymonitor/utils/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class ShowStation extends StatefulWidget {
-  const ShowStation({
+class ShowStation1 extends StatefulWidget {
+  const ShowStation1({
     super.key,
-    required this.keys,
+    required this.id,
     required this.name,
     required this.lastdate,
     required this.lasttime,
-    required this.pm01,
-    required this.pm25,
-    required this.pm10,
-    required this.co,
-    required this.co2,
-    required this.no2,
   });
 
-  final String keys;
+  final String id;
   final String name;
   final String lastdate;
   final String lasttime;
-  final int pm01, pm25, pm10, co, co2, no2;
 
   @override
-  State<ShowStation> createState() => _ShowStationState();
+  State<ShowStation1> createState() => _ShowStationState();
 }
 
-class _ShowStationState extends State<ShowStation> {
+class _ShowStationState extends State<ShowStation1> {
   int touchedIndex = -1;
 
   @override
@@ -151,12 +144,12 @@ class _ShowStationState extends State<ShowStation> {
               spacing: 0, // space between the containers
               runSpacing: 0, // space between the lines
               children: <Widget>[
-                if (widget.pm01 > 0) dpPollution(size, "PM 1", "µg/m³", widget.pm01),
-                if (widget.pm25 > 0) dpPollution(size, "PM 2.5", "µg/m³", widget.pm25),
-                if (widget.pm10 > 0) dpPollution(size, "PM 10", "µg/m³", widget.pm10),
-                if (widget.co > 0) dpPollution(size, "CO", "µg/m³", widget.co),
-                if (widget.co2 > 0) dpPollution(size, "CO2", "µg/m³", widget.co2),
-                if (widget.no2 > 0) dpPollution(size, "NO2", "µg/m³", widget.no2),
+                dpPollution(size, "PM 1", "µg/m³", 24),
+                dpPollution(size, "PM 2.5", "µg/m³", 12),
+                dpPollution(size, "PM 10", "µg/m³", 4),
+                dpPollution(size, "CO", "µg/m³", 5),
+                dpPollution(size, "CO2", "µg/m³", 23),
+                dpPollution(size, "NO2", "µg/m³", 18),
               ],
             ),
           ),

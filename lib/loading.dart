@@ -51,7 +51,7 @@ class _LoadingState extends State<Loading> {
   void initState() {
     super.initState();
     print("object");
-    Timer(const Duration(seconds: 3), () => checkSignIn(context));
+    Timer(const Duration(seconds: 1), () => checkSignIn(context));
   }
 
   @override

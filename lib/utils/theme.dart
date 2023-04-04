@@ -31,5 +31,5 @@ DateTime now = DateTime.now();
 String formattedDate = DateFormat('yyyy-MM-dd').format(now);
 late String formattedTime;
 
-bool isOpenMenu = false;
+bool isExpanded = false;
 int currentIndex = 0;
