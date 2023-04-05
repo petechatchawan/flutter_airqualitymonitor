@@ -22,8 +22,9 @@ class CustomCardMember extends StatefulWidget {
     required this.temp,
     required this.humid,
     required this.light,
+    required this.userRole,
   }) : super(key: key);
-
+  final String userRole;
   final String id;
   final String name;
   final String lastdate;
@@ -137,7 +138,7 @@ class _CustomCardMemberState extends State<CustomCardMember> {
             ),
           ),
           SizedBox(height: miniSpacer),
-          if (role)
+          if (widget.userRole == "แอดมิน")
             Row(
               children: [
                 Flexible(

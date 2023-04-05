@@ -184,12 +184,13 @@ class _ProfilePageState extends State<ProfilePage> {
                                 onPressed: () {},
                                 child: Text('เปลื่ยนรหัสผ่าน'),
                               ),
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ManagePage()));
-                                },
-                                child: Text('จัดการสถานี'),
-                              ),
+                              if (widget.userRole == "แอดมิน")
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => ManagePage(widget.userRole)));
+                                  },
+                                  child: Text('จัดการสถานี'),
+                                ),
                               TextButton(
                                 onPressed: () async {
                                   try {
@@ -256,6 +257,7 @@ class _ProfilePageState extends State<ProfilePage> {
             onPressed: () {
               _getLocationPermission();
               _getCurrentLocation();
+              _getMarkers();
             },
             backgroundColor: Colors.white,
             child: Icon(
