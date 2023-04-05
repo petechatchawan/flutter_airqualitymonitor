@@ -8,15 +8,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_airqualitymonitor/pages/manage_page.dart';
-import 'package:flutter_airqualitymonitor/pages/showstation.dart';
 import 'package:flutter_airqualitymonitor/pages/station.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
-
-import 'package:flutter_airqualitymonitor/pages/addstation_page.dart';
 import 'package:flutter_airqualitymonitor/pages/signin_page.dart';
 import 'package:flutter_airqualitymonitor/utils/theme.dart';
 

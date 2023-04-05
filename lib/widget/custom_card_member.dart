@@ -1,13 +1,15 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_airqualitymonitor/pages/showstation.dart';
+import 'package:flutter_airqualitymonitor/pages/station.dart';
 import 'package:flutter_airqualitymonitor/utils/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomCardMember extends StatefulWidget {
   const CustomCardMember({
     Key? key,
-    required this.keys,
+    required this.id,
     required this.name,
     required this.lastdate,
     required this.lasttime,
@@ -22,7 +24,7 @@ class CustomCardMember extends StatefulWidget {
     required this.light,
   }) : super(key: key);
 
-  final String keys;
+  final String id;
   final String name;
   final String lastdate;
   final String lasttime;
@@ -105,17 +107,11 @@ class _CustomCardMemberState extends State<CustomCardMember> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ShowStation(
-                    keys: widget.keys,
+                  builder: (context) => Station(
+                    id: widget.id,
                     name: widget.name,
                     lastdate: widget.lastdate,
                     lasttime: widget.lasttime,
-                    pm01: widget.pm01,
-                    pm25: widget.pm25,
-                    pm10: widget.pm10,
-                    co: widget.co,
-                    co2: widget.co2,
-                    no2: widget.no2,
                   ),
                 ),
               );
@@ -165,8 +161,8 @@ class _CustomCardMemberState extends State<CustomCardMember> {
                                   CollectionReference currentCols = FirebaseFirestore.instance.collection('currentdata');
                                   Navigator.of(context).pop();
 
-                                  allstationCols.doc(widget.keys).delete().then((value) => print("allstationCols ${widget.keys} Deleted")).catchError((error) => print("Failed to delete user: $error"));
-                                  currentCols.doc(widget.keys).delete().then((value) => print("currentCols ${widget.keys} Deleted")).catchError((error) => print("Failed to delete user: $error"));
+                                  allstationCols.doc(widget.id).delete().then((value) => print("allstationCols ${widget.id} Deleted")).catchError((error) => print("Failed to delete user: $error"));
+                                  currentCols.doc(widget.id).delete().then((value) => print("currentCols ${widget.id} Deleted")).catchError((error) => print("Failed to delete user: $error"));
                                 },
                               ),
                               // Cancel Button

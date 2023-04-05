@@ -115,7 +115,7 @@ class _ManagePageState extends State<ManagePage> {
                                     return Padding(
                                       padding: EdgeInsets.only(bottom: padding),
                                       child: CustomCardMember(
-                                        keys: allStationDocs.id,
+                                        id: allStationDocs.id,
                                         name: allStationDocs['name'],
                                         lastdate: allStationDocs['lastdate'],
                                         lasttime: allStationDocs['lasttime'],
