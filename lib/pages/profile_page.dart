@@ -287,10 +287,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   itemCount: stations.length,
                   itemBuilder: (BuildContext context, int index) {
                     final Map<String, dynamic> data = stations[index].data() as Map<String, dynamic>;
-
                     final String name = data['name'];
                     final lat = double.parse(data['lat']);
                     final lng = double.parse(data['lng']);
+
                     return Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                       child: Container(
